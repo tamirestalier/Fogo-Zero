@@ -196,7 +196,7 @@ img {
     padding: 60px 20px;
 }
 
-.orange {
+/*.orange {
     border-top: 8px solid #ff9933;
     display:flow-root;
 }
@@ -207,7 +207,7 @@ img {
 
 .red {
     border-top: 8px solid #f72929;
-}
+}*/
 
 /*Mapas*/
 
@@ -299,7 +299,7 @@ img {
 
 .mapas-conteudo {
     width: 960px; /* Define a largura para corresponder às outras seções */
-    border-top: 2px solid #cc6600; /* Adiciona a linha antes do mapa */
+    /*border-top: 2px solid #cc6600; /* Adiciona a linha antes do mapa */
     padding-top: 20px; /* Adiciona espaçamento superior */
 }
 
@@ -358,4 +358,28 @@ button[type="submit"]:hover {
     background: #cc6600; /* Cor do botão ao passar o mouse */
 }
 
+ /* Pagina comentarios*/
+.comentarios-lista {
+    max-width: 600px;
+    margin: 60px auto;
+    padding: 20px;
+    background: #fff;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.comentario-item {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+.comentario-item:last-child {
+    border-bottom: none; /* Remove a borda do último item */
+}
+
+.comentario-item strong {
+    color: #ff9933; /* Cor laranja para destaque */
+}
 

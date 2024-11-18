@@ -167,7 +167,7 @@ img {
     margin: 0 10px;
 }
 
-/*Comentario*/
+/*DENUNCIA*/
 
 .comentarios {
     max-width: 960px;
@@ -383,3 +383,22 @@ button[type="submit"]:hover {
     color: #ff9933; /* Cor laranja para destaque */
 }
 
+/* Estilos para o novo elemento de contato */
+.contato-queimadas {
+    background: #ffcc00; /* Cor de alerta */
+    padding: 20px;
+    margin: 20px 0;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contato-queimadas h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.contato-queimadas p {
+    color: #666;
+    font-size: 1.2em;
+}

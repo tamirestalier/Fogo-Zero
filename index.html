@@ -11,21 +11,20 @@
     <link rel="stylesheet" type="text/css" href="css/style.css" />
   </head>
 
-    <div class="superinfo-bg">
-      <div class="superinfo">
-        <p>Seg/Sexta: 8:00h às 12:00h e das 14:00h às 17:00h</p>
-        <a href="tel:+551432511122">Tel:(14) 3251-1122</a>
-        <p>Rua Verde Esperança, 123 - Centro, Jaú - SP, 17210-000</p>
-      </div>
-    </div>
+  <div class="contato-queimadas">
+    <p><strong>Emergência:</strong> 190</p>
+    <p><strong>Telefone da Raizen:</strong> 0800 728 1616</p>
+</div>
 
     <header class="menu-bg"> <div class="menu"> <div class="menu-logo"> 
-      <a href="index.html">Fogo Zero</a> </div> <nav class="menu-nav"> 
+      <a href="index.html">FogoZero</a> </div> <nav class="menu-nav"> 
         <ul> <li><a href="#sobre">Sobre</a></li> 
           <li><a href="educacao.html">Educação</a></li> 
           <li><a href="#mapas">Mapas</a></li> 
           <li><a href="#sites">Sites</a></li>
-          <li><a href="denuncia.html">Denúncias</a></li> 
+          <li><a href="denuncia.html">Denuncie</a></li> 
+          <li><a href="quemsomos.html">Quem Somos</a></li>
+          <li><a href="cadastrar.html">Cadastrar-se</a></li>
         </ul> 
       </nav>
      </div> 
@@ -62,16 +61,21 @@
       </div>
     </section>
 
-
-    
-    <section class="mapas" id="mapas">
-      <div class="mapas-conteudo">
-        <div class="mapas-item">
-          <h2>Passe o mouse e navegue.</h2>
-          <iframe
-            class="mapa-iframe"
-            src="https://panorama.sipam.gov.br/painel-do-fogo/"
-            style="width: 100%; height: 500px; border: none"></iframe>
+    <section class="painel-fogo" id="painel-fogo">
+      <div class="painel-fogo-container">
+        <div class="painel-fogo-itens">
+          <h2>Passe o mouse e navegue.</h2> <p>Utilize o mapa interativo "Painel do Fogo" para monitorar queimadas em tempo real. <br>
+            Você pode ampliar, reduzir e clicar nas áreas de interesse para obter mais informações detalhadas sobre os focos de incêndio.
+          <div class="iframe-container">
+            <!--<iframe height="800" scrolling="no" src="https://public.tableau.com/views/RF_AreaQueimada_INPE_Bioma_2001-2017_Tableau_15-12-2017_PublicadoSNIF/Painel1?:embed=y&amp;:display_count=no&amp;:showVizHome=no&amp;:toolbar=no" style="border-width: 0px;" width="1000" frameborder="0"></iframe>-->
+            <iframe
+              height="800"
+              src="https://panorama.sipam.gov.br/painel-do-fogo/"
+              style="border-width: 0px"
+              width="1000"
+              frameborder="0">
+            </iframe>
+          </div>
         </div>
       </div>
     </section>
@@ -86,27 +90,7 @@
           <a href="http://queimadas.dgi.inpe.br/queimadas/bdqueimadas/" target="_blank">Queimadas - INPE</a>
         </div>
       </div>
-    </section>
-    
-    <section class="cadastre-se">
-      <div class="cadastre-se-info">
-        <h1>Cadastre-se</h1>
-        <p>Seja um membro</p>
-      </div>
-      <form class="cadastre-se-form">
-        <input type="text" placeholder="Seu e-mail" />
-        <button type="submit">Cadastrar</button>
-      </form>
-    </section>
-
-
-    <!-- Novo elemento para telefones de contato -->
-<div class="contato-queimadas">
-    <h2>Contato em Caso de Queimadas</h2>
-    <p><strong>Emergência:</strong> 190</p>
-    <p><strong>Telefone da Raizen:</strong> 0800 728 1616</p>
-</div>
-
+    </section>  
 
     <footer class="footer">
       <p>&copy; 2024 Todos os direitos reservados.</p>

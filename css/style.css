@@ -1,6 +1,7 @@
 body, h1, h2, p, ul, li, a {
     margin: 0;
     padding: 0;
+    text-align: center;
 }
 
 body {
@@ -33,7 +34,7 @@ img {
 
 .sites {
     background: #f7f7f7;
-    padding: 60px;
+    padding:40px;
     text-align: center; /* Centraliza o conteúdo */
 }
 
@@ -123,14 +124,13 @@ img {
     color:#cc6600;
 }
 
-/*Introdução*/
+/*Introdução*/ /*denncia*/
 
 .introducao {
     font-size: 3em;
     line-height: 1;
-    max-width: 960px;
-    margin: 0 auto;
     padding: 60px 10px;
+    text-align: center;
 }
 
 /*Sobre*/
@@ -196,19 +196,6 @@ img {
     padding: 60px 20px;
 }
 
-/*.orange {
-    border-top: 8px solid #ff9933;
-    display:flow-root;
-}
-
-.yellow {
-    border-top: 8px solid #e9ec11;
-}
-
-.red {
-    border-top: 8px solid #f72929;
-}*/
-
 /*Mapas*/
 
 .mapas {
@@ -232,6 +219,7 @@ img {
     text-align: center;
     margin-top: 20px;
 }
+
 /*Sites*/
 
 .sites {
@@ -256,7 +244,7 @@ img {
 
 }
 
-/*Cadastrar*/
+/*Cadastrar
 
 .cadastre-se {
     background: #f7f7f7;
@@ -278,7 +266,8 @@ img {
     text-align: center;
     margin-top: 10px;
 
-}
+}*/
+
 
 .footer {
     text-align: center;
@@ -309,6 +298,8 @@ img {
     padding: 20px;
     margin: 10px;
 }
+
+/*Denuncia*/
 
 .comentarios-form {
     max-width: 600px;
@@ -386,11 +377,10 @@ button[type="submit"]:hover {
 /* Estilos para o novo elemento de contato */
 .contato-queimadas {
     background: #ffcc00; /* Cor de alerta */
-    padding: 20px;
-    margin: 20px 0;
+    padding: 10px;
+    margin: 0px 0;
     text-align: center;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
 }
 
 .contato-queimadas h2 {
@@ -401,4 +391,206 @@ button[type="submit"]:hover {
 .contato-queimadas p {
     color: #666;
     font-size: 1.2em;
+}
+
+.iframe-container{
+    overflow: hidden;
+    height: 800px;
+    text-align:center
+}
+
+.iframe-container iframe {
+    position: relative;
+    top: -55px;
+}
+
+/* Estilos gerais */
+body, h1, h2, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Nunito", Arial, Helvetica, sans-serif;
+    color: #222222;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* SuperInfo */
+.superinfo-bg {
+    background: #cc6600;
+    color: white;
+}
+
+.superinfo {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    flex-wrap: wrap;
+}
+
+.superinfo p, .superinfo a {
+    margin: 0 10px 10px 10px;
+}
+
+.superinfo a {
+    color: white;
+}
+
+/* Menu */
+.menu-bg {
+    background: #ff9933;
+}
+
+.menu {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 15px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu a {
+    color: white;
+}
+
+.menu-logo a {
+    font-size: 2.25em;
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+.menu-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.menu-nav li {
+    margin-right: 20px;
+}
+
+.menu-nav a {
+    font-size: 1.25em;
+    display: block;
+    padding: 10px;
+}
+
+.menu-nav a:hover {
+    color: #cc6600;
+}
+
+/* Introdução */
+.introducao {
+    font-size: 3em;
+    line-height: 1;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 60px 10px;
+    text-align: center;
+}
+
+/* Formulário de Cadastro */
+.cadastrar-form {
+    max-width: 600px;
+    margin: 60px auto;
+    padding: 20px;
+    background: #fff;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cadastrar-form .form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.cadastrar-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.cadastrar-form input[type="email"],
+.cadastrar-form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.cadastrar-form .form-check-input {
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.cadastrar-form button {
+    background: #49474d86;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+}
+
+.cadastrar-form button:hover {
+    background: #0056b3;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #ff9933;
+    color: white;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu-nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .introducao {
+        font-size: 2em;
+        padding: 30px 10px;
+    }
+
+    .cadastrar-form {
+        padding: 15px;
+    }
+
+    .menu-logo a {
+        font-size: 1.5em;
+    }
+    
+
 }

@@ -644,6 +644,38 @@ img {
 .cadastrar-form button:hover {
     background: #0056b3;
 }
-/*denuncia imagem*/
+/* Seção Quem Somos */
+.quemsomos {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 20px;
+    background: rgb(247, 247, 247);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.introducao {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.conteudo {
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+
+.conteudo ul {
+    list-style: none;
+    padding: 0;
+}
+
+.conteudo ul li {
+    background: #e0e0e0;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 4px;
+}
+
 
 

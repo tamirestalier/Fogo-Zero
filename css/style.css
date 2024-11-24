@@ -133,6 +133,7 @@ img {
     line-height: 1;
     padding: 60px 10px;
     text-align: center;
+    
 }
 
 /*Sobre*/
@@ -169,60 +170,6 @@ img {
     margin: 0 10px;
 }
 
-/*DENUNCIA*/
-
-.comentarios {
-    max-width: 960px;
-    margin: 60px auto;
-}
-
-.comentarios h1 {
-    font-size: 3em;
-    margin: 0 10px 60px 10px
-}
-
-.comentarios-container{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-end;
-}
-.comentarios-item {
-    flex: 1 1 175px;
-    margin: 10px;
-}
-
-.comentarios-item h2 {
-    font-size: 3em;
-    color: #a4a4a4;
-    background: #f7f7f7;
-    padding: 60px 20px;
-}
-
-/*Mapas
-
-.mapas {
-    background: #f7f7f7;
-    padding: 60px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-end;   
-}
-
-.mapas-item {
-    flex: 1;
-    border: 4px solid white;
-    padding: 20px;
-    margin: 10px;
-}
-
-.margin-item h2{
-    font-size: 3em;
-    color: #a4a4a4;
-    text-align: center;
-    margin-top: 20px;
-    
-}*/
-
 /*Sites*/
 
 .sites {
@@ -248,12 +195,47 @@ img {
 }
 
 /* Introdução da página de educação */ 
-.educacao-intro {
-     max-width: 800px; margin: 40px auto; padding: 20px; 
-     background: #f7f7f7;
-      border-radius: 8px; 
-      box-shadow: 0
+.educacao-intro, .educacao-incendios {
+    flex: 1;
+    margin: 40px;
+    padding: 20px; 
+    background: #f7f7f7;
+    border-radius: 8px; 
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
+
+.educacao-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.educacao-bombeiros {
+    max-width: 800px; 
+    margin: 40px auto; 
+    padding: 20px; 
+    background: #f7f7f7;
+    border-radius: 8px; 
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.bombeiros-videos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.bombeiros-videos iframe {
+    border: 5px solid #ff6600; /* Cor laranja */
+    border-radius: 5px;
+}
+
+h2 {
+    color: #ff6600; /* Cor laranja */
+}
+
+
 
 .footer {
     text-align: center;
@@ -299,11 +281,21 @@ img {
 
 /*Denuncia*/
 
+/* Fundo com imagem */
+.fundo-imagem {
+    background-size: cover;
+    padding: 60px 20px;
+    min-height: calc(100vh - 100px); /* Ajuste de altura para evitar sobreposição no footer */
+    position: relative;
+    box-sizing: border-box; /* Inclui padding e border na altura */
+}
+
+/* Formulário de Denúncia */
 .comentarios-form {
     max-width: 600px;
     margin: 60px auto;
-    padding: 20px;
-    background: #fff;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.8); /* Ajuste para fundo semi-transparente */
     border: 2px solid #ccc;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -321,17 +313,14 @@ img {
 }
 
 .form-group input[type="text"],
+.form-group input[type="date"],
+.form-group input[type="time"],
+.form-group input[type="file"],
 .form-group textarea {
     width: 100%;
     padding: 10px;
     border: 2px solid #ff9933; /* Borda laranja */
     border-radius: 4px;
-}
-
-.form-group input[type="file"] {
-    display: block;
-    margin-top: 10px;
-    border: 2px solid #ff9933; /* Borda laranja para o input de arquivo */
 }
 
 button[type="submit"] {
@@ -347,7 +336,7 @@ button[type="submit"]:hover {
     background: #cc6600; /* Cor do botão ao passar o mouse */
 }
 
- /* Pagina comentarios*/
+/* Lista de Comentários */
 .comentarios-lista {
     max-width: 600px;
     margin: 60px auto;
@@ -378,7 +367,6 @@ button[type="submit"]:hover {
     padding: 10px;
     margin: 0px 0;
     text-align: center;
-
 }
 
 .contato-queimadas h2 {
@@ -391,16 +379,17 @@ button[type="submit"]:hover {
     font-size: 1.2em;
 }
 
-.iframe-container{
+.iframe-container {
     overflow: hidden;
     height: 800px;
-    text-align:center
+    text-align: center;
 }
 
 .iframe-container iframe {
     position: relative;
     top: -55px;
 }
+
 
 /* Estilos gerais */
 body, h1, h2, p, ul, li, a {
@@ -507,7 +496,7 @@ img {
     text-align: center;
 }
 
-/* Formulário de Cadastro */
+/* Formulário de receba alertas */
 .cadastrar-form {
     max-width: 600px;
     margin: 60px auto;
@@ -530,6 +519,8 @@ img {
 }
 
 .cadastrar-form input[type="email"],
+.cadastrar-form input[type="tel"],
+.cadastrar-form input[type="text"],
 .cadastrar-form input[type="password"] {
     width: 100%;
     padding: 10px;
@@ -556,6 +547,7 @@ img {
 .cadastrar-form button:hover {
     background: #0056b3;
 }
+
 
 /* Footer */
 .footer {
@@ -590,4 +582,68 @@ img {
         font-size: 1.5em;
     }
 }
+/* Fundo com imagem RECEBAALERTA*/
+.fundo-imagem {
+    background-size: cover;
+    padding: 50px 10px;
+    min-height: calc(100vh - 100px); /* Ajuste de altura para evitar sobreposição no footer */
+    position: relative;
+    box-sizing: content-box; /* Inclui padding e border na altura */
+}
+
+.cadastrar-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    box-sizing: border-box; /* Inclui padding e border na largura e altura */
+}
+
+.cadastrar-form .form-group {
+    margin-bottom: 15px;
+}
+
+.cadastrar-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.cadastrar-form input[type="email"],
+.cadastrar-form input[type="tel"],
+.cadastrar-form input[type="text"],
+.cadastrar-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.cadastrar-form .form-check-input {
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.cadastrar-form button {
+    background: #49474d86;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+}
+
+.cadastrar-form button:hover {
+    background: #0056b3;
+}
+/*denuncia imagem*/
+
 

@@ -644,12 +644,13 @@ img {
 .cadastrar-form button:hover {
     background: #0056b3;
 }
-/* Seção Quem Somos */
+
+/* Estilos para a seção Quem Somos */
 .quemsomos {
     max-width: 800px;
     margin: 60px auto;
     padding: 20px;
-    background: rgb(247, 247, 247);
+    background: #f7f7f7;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -665,16 +666,31 @@ img {
     line-height: 1.5;
 }
 
-.conteudo ul {
-    list-style: none;
-    padding: 0;
+.membros {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
-.conteudo ul li {
-    background: #e0e0e0;
-    margin: 5px 0;
+.membro {
+    text-align: center;
+    margin: 10px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
     padding: 10px;
-    border-radius: 4px;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.membro img {
+    max-width: 150px;
+    border-radius: 8px;
+}
+
+.membro p {
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 5px;
 }
 
 

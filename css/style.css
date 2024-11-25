@@ -31,41 +31,6 @@ img {
     background: #cc6600;
     color: white;
 }
-
-.sites {
-    background: #f7f7f7;
-    padding:40px;
-    text-align: center; /* Centraliza o conteúdo */
-}
-
-.sites-container {
-    display: flex;
-    justify-content: center; /* Centraliza os itens no contêiner */
-    flex-wrap: wrap; /* Permite que os itens se ajustem em várias linhas se necessário */
-    gap: 20px; /* Espaçamento entre os itens */
-}
-
-.sites-item {
-    flex: 1 1 200px; /* Flexível e largura mínima de 200px */
-    margin: 10px;
-    background: #fff; /* Fundo branco para destaque */
-    border: 2px solid #ccc; /* Borda cinza clara */
-    padding: 20px;
-    border-radius: 8px; /* Bordas arredondadas */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
-}
-
-.sites-item a {
-    font-size: 1.2em;
-    color: #007BFF; /* Cor do link */
-    text-decoration: none; /* Remove sublinhado */
-}
-
-.sites-item a:hover {
-    text-decoration: underline; /* Sublinha ao passar o mouse */
-}
-
-
 .superinfo {
     max-width: 960px;
     margin: 0 auto;
@@ -171,13 +136,45 @@ img {
 }
 
 /*Sites*/
+.sites {
+    background: #f7f7f7;
+    padding:40px;
+    text-align: center; /* Centraliza o conteúdo */
+}
+
+.sites-container {
+    display: flex;
+    justify-content: center; /* Centraliza os itens no contêiner */
+    flex-wrap:wrap; /* Permite que os itens se ajustem em várias linhas se necessário */
+    gap: 20px; /* Espaçamento entre os itens */
+}
+
+.sites-item {
+    flex: 1 1 200px; /* Flexível e largura mínima de 200px */
+    margin: 10px;
+    background: #fff; /* Fundo branco para destaque */
+    border: 2px solid #ccc; /* Borda cinza clara */
+    padding: 20px;
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+
+.sites-item a {
+    font-size: 1.2em;
+    color: #007BFF; /* Cor do link */
+    text-decoration: none; /* Remove sublinhado */
+}
+
+.sites-item a:hover {
+    text-decoration: underline; /* Sublinha ao passar o mouse */
+}
 
 .sites {
     background: #f7f7f7;
     padding: 60px;
     display: flex;
     flex-wrap: wrap;
-    align-items: flex-end;
+    align-items:normal;
 }
 
 .sites-item {

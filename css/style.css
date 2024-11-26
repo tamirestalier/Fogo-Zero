@@ -161,7 +161,7 @@ img {
 
 .sites-item a {
     font-size: 1.2em;
-    color: #007BFF; /* Cor do link */
+    color: #ff9933; /* Cor do link */
     text-decoration: none; /* Remove sublinhado */
 }
 
@@ -316,7 +316,7 @@ h2 {
 .form-group textarea {
     width: 100%;
     padding: 10px;
-    border: 2px solid #ff9933; /* Borda laranja */
+    border: 2px solid #ccc; /* Borda laranja */
     border-radius: 4px;
 }
 
@@ -493,7 +493,7 @@ img {
     text-align: center;
 }
 
-/* Formulário de receba alertas */
+/* Formulário de receba alertas
 .cadastrar-form {
     max-width: 600px;
     margin: 60px auto;
@@ -523,13 +523,13 @@ img {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
-}
+} */
 
 .cadastrar-form .form-check-input {
     margin-top: 10px;
     margin-right: 10px;
 }
-
+  
 .cadastrar-form button {
     background: #49474d86;
     color: white;
@@ -542,7 +542,7 @@ img {
 }
 
 .cadastrar-form button:hover {
-    background: #0056b3;
+    background: #cc6600;
 }
 
 
@@ -628,7 +628,7 @@ img {
 }
 
 .cadastrar-form button {
-    background: #49474d86;
+    background: #ff9933;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -639,7 +639,7 @@ img {
 }
 
 .cadastrar-form button:hover {
-    background: #0056b3;
+    background: #cc6600;
 }
 
 /* Estilos para a seção Quem Somos */

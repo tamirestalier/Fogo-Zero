@@ -1,0 +1,307 @@
+/* Reset e base */
+* {
+    box-sizing: border-box;
+  }
+  body, h1, h2, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    font-family: "Nunito", Arial, Helvetica, sans-serif;
+    color: #222222;
+  }
+  ul {
+    list-style: none;
+  }
+  a {
+    text-decoration: none;
+  }
+  img {
+    display: block;
+    max-width: 100%;
+  }
+  
+  /* Superinfo */
+  .superinfo-bg {
+    background: #cc6600;
+    color: white;
+  }
+  .superinfo {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    flex-wrap: wrap;
+  }
+  .superinfo p, .superinfo a {
+    margin: 0 10px 10px;
+  }
+  .superinfo a {
+    color: white;
+  }
+  
+  /* Menu */
+  .menu-bg {
+    background: #ff9933;
+  }
+  .menu {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .menu a {
+    color: white;
+  }
+  .menu-logo a {
+    font-size: 2.25em;
+    font-weight: bold;
+    margin: 0 10px;
+  }
+  .menu-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .menu-nav li {
+    margin-right: 20px;
+  }
+  .menu-nav a {
+    font-size: 1.25em;
+    padding: 10px;
+    display: block;
+  }
+  .menu-nav a:hover {
+    color: #cc6600;
+    background-color: whitesmoke;
+    border-radius: 10px;
+  }
+  
+  /* Introdução */
+  .introducao {
+    font-size: 3em;
+    line-height: 1;
+    text-align: center;
+    padding: 60px 10px;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  
+  /* Seção Sobre */
+  .sobre {
+    border-top: 2px solid #cc6600;
+    border-bottom: 2px solid #cc6600;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 60px 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .sobre-info {
+    flex: 2 1 300px;
+    margin: 0 10px;
+  }
+  .sobre-info h1 {
+    font-size: 3em;
+    margin-bottom: 0.5em;
+  }
+  .sobre-info p {
+    font-size: 1.25em;
+    line-height: 1.4;
+    margin-bottom: 1em;
+    color: #7c7c7c;
+  }
+  .sobre-img {
+    flex: 1 1 160px;
+    margin: 0 10px;
+  }
+  
+  /* Seção Sites */
+  .sites {
+    background: #f7f7f7;
+    padding: 60px;
+  }
+  .sites-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .sites-item {
+    flex: 1 1 200px;
+    background: #fff;
+    border: 2px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+  }
+  .sites-item a {
+    font-size: 1.2em;
+    color: #ff9933;
+  }
+  .sites-item a:hover {
+    text-decoration: underline;
+  }
+  .sites-item h2 {
+    font-size: 3em;
+    color: #131212;
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  /* Educação */
+  .educacao-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .educacao-intro, .educacao-incendios, .educacao-bombeiros {
+    background: #f7f7f7;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  .educacao-bombeiros {
+    max-width: 800px;
+  }
+  .bombeiros-videos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+  }
+  .bombeiros-videos iframe {
+    border: 5px solid #ff6600;
+    border-radius: 5px;
+  }
+  
+  /* Painel Fogo */
+  .painel-fogo {
+    background: #ffffff;
+    padding: 60px;
+    display: flex;
+    justify-content: center;
+  }
+  .painel-fogo-container {
+    width: 960px;
+    padding-top: 20px;
+  }
+  .painel-fogo-itens h2 {
+    font-size: 3em;
+    font-weight: bold;
+    color: #222;
+    margin: 10px;
+    padding: 20px;
+  }
+  .painel-fogo-itens p {
+    font-size: 1.25em;
+    color: #7c7c7c;
+    margin: 0 0 20px;
+    padding: 20px;
+  }
+  
+  /* Denúncia */
+  .fundo-imagem {
+    background-size: cover;
+    padding: 60px 20px;
+    min-height: calc(100vh - 100px);
+    box-sizing: border-box;
+  }
+  .comentarios-form, .comentarios-lista {
+    max-width: 600px;
+    margin: 60px auto;
+    background: rgba(255, 255, 255, 0.8);
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  .comentario-item {
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  .comentario-item:last-child {
+    border-bottom: none;
+  }
+  .comentario-item strong {
+    color: #ff9933;
+  }
+  
+  /* Formulário Genérico */
+  .form-group {
+    margin-bottom: 15px;
+    text-align: left;
+  }
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  .form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+  }
+  button[type="submit"] {
+    background: #ff9933;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  button[type="submit"]:hover {
+    background: #cc6600;
+  }
+  
+  /* Contato Queimadas */
+  .contato-queimadas {
+    background: #af621b;
+    padding: 10px;
+    text-align: center;
+  }
+  .contato-queimadas h2 {
+    color: #333;
+    margin-bottom: 10px;
+  }
+  .contato-queimadas p {
+    color: white;
+    font-size: 1.2em;
+  }
+  
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #ff9933;
+    color: white;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .menu {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .menu-nav ul {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .introducao {
+      font-size: 2em;
+      padding: 30px 10px;
+    }
+    .menu-logo a {
+      font-size: 1.5em;
+    }
+  }
+
+ 
+  

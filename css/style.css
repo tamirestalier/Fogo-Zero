@@ -464,3 +464,103 @@ input[type="checkbox"] {
   vertical-align: middle;
   font-weight: bold;
 }
+/* Estilos para a página Quem Somos */
+.hero-quem-somos {
+  background: linear-gradient(#ff9933, rgba(255, 155, 6, 0.953)), url('../img/equipe-fogo-zero.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 120px 0;
+  text-align: center;
+}
+
+.hero-quem-somos h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.hero-quem-somos p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.nossa-missao {
+  background-color: #fff8f0;
+  padding: 80px 0;
+}
+
+.card-missao {
+  background: white;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  height: 100%;
+  transition: transform 0.3s;
+}
+
+.card-missao:hover {
+  transform: translateY(-10px);
+}
+
+.card-missao i {
+  font-size: 2.5rem;
+  color: #ff8c00;
+  margin-bottom: 20px;
+}
+
+.equipe {
+  padding: 80px 0;
+}
+
+.membro-equipe {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.membro-equipe img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #ff8c00;
+  margin-bottom: 20px;
+}
+
+.membro-equipe h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.membro-equipe p.funcao {
+  color: #ff8c00;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.redes-sociais {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.redes-sociais a {
+  color: #333;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.redes-sociais a:hover {
+  color: #ff8c00;
+}
+
+@media (max-width: 768px) {
+  .hero-quem-somos {
+      padding: 80px 0;
+  }
+  
+  .hero-quem-somos h1 {
+      font-size: 2.5rem;
+  }
+}

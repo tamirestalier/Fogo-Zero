@@ -307,6 +307,140 @@ button[type="submit"]:hover {
     font-size: 1.5em;
   }
 }
+
+/* FORMULÁRIO DE CADASTRO */
+.cadastro-bg {
+  background-image: url('../img/FotoFundoFogo.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.cadastrar-form {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 700px;
+}
+
+.cadastrar-form .introducao {
+  font-size: 2.5em;
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 0;
+}
+
+/* Checkboxes customizados */
+.custom-checkbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 10px;
+  position: relative;
+  font-size: 16px;
+  user-select: none;
+}
+
+.custom-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.custom-checkbox .checkmark {
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border: 2px solid #ff8c00;
+  border-radius: 4px;
+  margin-right: 10px;
+  position: relative;
+  transition: 0.3s;
+}
+
+.custom-checkbox:hover input ~ .checkmark {
+  background-color: #f0f0f0;
+}
+
+.custom-checkbox input:checked ~ .checkmark {
+  background-color: #ff8c00;
+}
+
+.custom-checkbox .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.custom-checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.custom-checkbox .checkmark:after {
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+/* Fumaça */
+.custom-checkbox input:checked + .checkmark::before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  width: 6px;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  animation: smoke 2s ease-out forwards;
+}
+
+@keyframes smoke {
+  0% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-20px) scale(1.5);
+  }
+}
+
+/* Feedback visual para validação */
+.form-control:invalid {
+  border-color: #dc3545;
+}
+
+.form-control:valid {
+  border-color: #28a745;
+}
+
+.btn-primary {
+  background-color: #ff8c00;
+  border-color: #ff8c00;
+  font-weight: bold;
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+}
+
+.btn-primary:hover {
+  background-color: #e67e00;
+  border-color: #e67e00;
+}
+
 /* AJUSTES DE FORMULÁRIO COM CHECKBOX */
 .form-group input:not([type="checkbox"]),
 .form-group textarea {

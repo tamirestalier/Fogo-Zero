@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8" />
     <title>Cadastre-se - Fogo Zero</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Cadastre-se no Fogo Zero para receber alertas e informações sobre incêndios florestais">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,17 +16,6 @@
 
     <!-- Seu CSS personalizado -->
     <link rel="stylesheet" type="text/css" href="css/style.css" />
-
-    <style>
-        /* Feedback visual para validação */
-        #exampleInputNome:invalid {
-            border-color: #dc3545;
-        }
-
-        #exampleInputNome:valid {
-            border-color: #28a745;
-        }
-    </style>
 </head>
 <body>
 
@@ -45,78 +35,135 @@
         </div>
     </header>
 
-    <section class="fundo-imagem" style="background-image: url('img/FotoFundoFogo.jpg'); background-size: cover; background-position: center; padding: 60px 20px; height: 100vh; position: relative;">
-        <div class="cadastrar-form bg-white p-4 rounded shadow" id="cadastrar-form" style="max-width: 500px; margin: auto;">
-            <h1 class="introducao mb-4 text-center">Cadastre-se</h1>
-            <form>
-                <div class="form-group mb-3">
-                    <label for="exampleInputNome">Nome completo</label>
+    <section class="fundo-imagem cadastro-bg">
+        <div class="cadastrar-form" id="cadastrar-form">
+            <h1 class="introducao">Cadastre-se</h1>
+            <form id="cadastroForm" novalidate>
+                <div class="form-group">
+                    <label for="exampleInputNome" class="form-label">Nome completo</label>
                     <input type="text" class="form-control" id="exampleInputNome" placeholder="Seu nome completo" required>
+                    <div class="invalid-feedback">
+                        Por favor, insira seu nome completo.
+                    </div>
                 </div>
 
-                <div class="form-group mb-3">
-                    <label for="exampleInputEmail1">Endereço de email</label>
+                <div class="form-group">
+                    <label for="exampleInputEmail1" class="form-label">Endereço de email</label>
                     <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Seu email" required>
+                    <div class="invalid-feedback">
+                        Por favor, insira um email válido.
+                    </div>
                     <small id="emailHelp" class="form-text text-muted">Nunca vamos compartilhar seu email com ninguém.</small>
                 </div>
 
-                <div class="form-group mb-3">
-                    <label for="exampleInputTelefone">Número de telefone</label>
+                <div class="form-group">
+                    <label for="exampleInputTelefone" class="form-label">Número de telefone</label>
                     <input type="tel" class="form-control" id="exampleInputTelefone" placeholder="Seu telefone">
+                    <small class="form-text text-muted">Opcional, para receber alertas SMS.</small>
                 </div>
 
-                <div class="form-group mb-3">
-                    <label for="exampleInputSenha">Senha</label>
-                    <input type="password" class="form-control" id="exampleInputSenha" placeholder="Crie uma senha" required>
+                <div class="form-group">
+                    <label for="exampleInputSenha" class="form-label">Senha</label>
+                    <input type="password" class="form-control" id="exampleInputSenha" placeholder="Crie uma senha" minlength="6" required>
+                    <div class="invalid-feedback">
+                        A senha deve ter pelo menos 6 caracteres.
+                    </div>
                 </div>
 
-                <div class="form-group mb-3">
-                    <label for="exampleInputConfirmarSenha">Confirmar Senha</label>
+                <div class="form-group">
+                    <label for="exampleInputConfirmarSenha" class="form-label">Confirmar Senha</label>
                     <input type="password" class="form-control" id="exampleInputConfirmarSenha" placeholder="Confirme sua senha" required>
+                    <div class="invalid-feedback">
+                        As senhas não coincidem.
+                    </div>
                 </div>
 
-                <div class="form-group form-check mb-2">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Receber alertas via SMS</label>
-                </div>
+                <!-- Checkbox customizado 1 -->
+                <label class="custom-checkbox">
+                    <input type="checkbox" id="exampleCheck1">
+                    <span class="checkmark"></span>
+                    Receber alertas via SMS
+                </label>
 
-                <div class="form-group form-check mb-4">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck2">
-                    <label class="form-check-label" for="exampleCheck2">Receber alertas via email</label>
-                </div>
+                <!-- Checkbox customizado 2 -->
+                <label class="custom-checkbox">
+                    <input type="checkbox" id="exampleCheck2" checked>
+                    <span class="checkmark"></span>
+                    Receber alertas via email
+                </label>
 
-                <button type="submit" class="btn btn-primary w-100">Enviar</button>
+                <button type="submit" class="btn btn-primary">Enviar</button>
             </form>
         </div>
     </section>
 
-    <footer class="footer text-center mt-4">
+    <footer class="footer">
         <p>&copy; 2024 Fogo Zero. Todos os direitos reservados.</p>
     </footer>
 
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"></script>
 
-    <!-- Validação JS -->
     <script>
-        document.querySelector("form").addEventListener("submit", function(e) {
+        // Validação do formulário
+        document.getElementById("cadastroForm").addEventListener("submit", function(e) {
+            e.preventDefault();
+            
+            const form = e.target;
             const nome = document.getElementById("exampleInputNome").value.trim();
+            const email = document.getElementById("exampleInputEmail1").value;
             const senha = document.getElementById("exampleInputSenha").value;
             const confirmarSenha = document.getElementById("exampleInputConfirmarSenha").value;
-
+            
+            // Validação básica
+            let isValid = true;
+            
             if (nome === "") {
-                alert("Por favor, preencha seu nome.");
-                e.preventDefault();
+                document.getElementById("exampleInputNome").classList.add('is-invalid');
+                isValid = false;
+            } else {
+                document.getElementById("exampleInputNome").classList.remove('is-invalid');
             }
-
+            
+            if (!email.includes('@') || !email.includes('.')) {
+                document.getElementById("exampleInputEmail1").classList.add('is-invalid');
+                isValid = false;
+            } else {
+                document.getElementById("exampleInputEmail1").classList.remove('is-invalid');
+            }
+            
             if (senha.length < 6) {
-                alert("A senha deve ter no mínimo 6 caracteres.");
-                e.preventDefault();
+                document.getElementById("exampleInputSenha").classList.add('is-invalid');
+                isValid = false;
+            } else {
+                document.getElementById("exampleInputSenha").classList.remove('is-invalid');
             }
-
+            
             if (senha !== confirmarSenha) {
-                alert("As senhas não coincidem.");
-                e.preventDefault();
+                document.getElementById("exampleInputConfirmarSenha").classList.add('is-invalid');
+                isValid = false;
+            } else {
+                document.getElementById("exampleInputConfirmarSenha").classList.remove('is-invalid');
+            }
+            
+            if (isValid) {
+                // Aqui você pode adicionar o código para enviar o formulário
+                alert('Cadastro realizado com sucesso!');
+                form.reset();
+                
+                // Redirecionar ou fazer outra ação após o cadastro
+                // window.location.href = 'obrigado.html';
+            }
+        });
+        
+        // Validação em tempo real para a confirmação de senha
+        document.getElementById("exampleInputConfirmarSenha").addEventListener('input', function() {
+            const senha = document.getElementById("exampleInputSenha").value;
+            const confirmarSenha = this.value;
+            
+            if (senha !== confirmarSenha) {
+                this.classList.add('is-invalid');
+            } else {
+                this.classList.remove('is-invalid');
             }
         });
     </script>

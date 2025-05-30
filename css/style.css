@@ -91,6 +91,7 @@ img {
   margin: 0 auto;
 }
 
+
 /* SEÇÃO SOBRE */
 .sobre {
   border-top: 2px solid #cc6600;
@@ -237,6 +238,7 @@ img {
   color: #ff9933;
 }
 
+
 /* FORMULÁRIO GENÉRICO */
 .form-group {
   margin-bottom: 15px;
@@ -307,6 +309,8 @@ button[type="submit"]:hover {
     font-size: 1.5em;
   }
 }
+
+
 
 /* FORMULÁRIO DE CADASTRO */
 .cadastro-bg {
@@ -464,15 +468,43 @@ input[type="checkbox"] {
   vertical-align: middle;
   font-weight: bold;
 }
-/* Estilos para a página Quem Somos */
+/* Estilos permanentes para a página Quem Somos */
 .hero-quem-somos {
-  background: linear-gradient(#ff9933, rgba(255, 155, 6, 0.953)), url('../img/equipe-fogo-zero.jpg');
-  background-size: cover;
-  background-position: center;
+  background: 
+    linear-gradient(to bottom, #aa5f15, rgba(255, 155, 6, 0.95)),
+    url('../img/80_Y29udmVyc2F0aW9uX2J1c2luZXNzLTA2.jpg') center/cover no-repeat fixed;
   color: white;
   padding: 120px 0;
   text-align: center;
+  position: relative;
+  z-index: 1;
 }
+
+.hero-quem-somos::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    linear-gradient(to bottom, #aa5f15, rgba(255, 155, 6, 0.95));
+  z-index: -1;
+}
+
+.hero-quem-somos h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  color: white !important;
+}
+
+.hero-quem-somos p {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+
 
 .hero-quem-somos h1 {
   font-size: 3.5rem;
